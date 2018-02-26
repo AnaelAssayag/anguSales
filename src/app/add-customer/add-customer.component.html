@@ -1,0 +1,21 @@
+<p>
+  add-customer works!
+</p>
+<h3 >Add a new dog </h3>
+<div class="input">
+    <label>Name:
+      <input type="text" [(ngModel)]="dog.name" placeholder="Name" />
+    </label>
+    <label>Weight:
+      <input type="text" [(ngModel)]="dog.weight" placeholder="Weight"  />
+    </label>
+    <label>Birth Date:
+      <input type="date" [(ngModel)]="dog.birthDate" placeholder="Date"  />
+    </label>
+    <input type="button" name="btnAddDog"  (click)="addDog()" value="Add dog" />
+    <input *ngIf="dog.name" type="button" name="btnAddDog"  (click)="editDog(dog)" value="Edit dog" />
+    <input *ngIf="dog.name" type="button" name="btnAddDog"  (click)="cancel()" value="Cancel" />
+
+
+
+</div>
